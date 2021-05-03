@@ -31,7 +31,7 @@ function convertIntegersToPhonetics(arry) {
             result += ','
         }
     }
-    return `"${result}"` 
+    return result
 }
 
 console.log(convertIntegersToPhonetics([3,25,209]))
