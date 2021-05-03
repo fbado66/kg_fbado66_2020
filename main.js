@@ -4,9 +4,8 @@
 // Given an array: [3, 25, 209], print “Three,TwoFive,TwoZeroNine” into stdout.
 // Given an array: [10, 300, 5], print “OneZero,ThreeZeroZero,Five” into stdout.
 
-// Approach: 
-// First thing is to create a dictionary hash where integers can be stores with their corresponding phonetics 
-
+// Solution: 
+// Creating a dictionary to store integers as keys, and corresponding phonetics as values
 let dictionary = {
     0: 'Zero',
     1: 'One',
