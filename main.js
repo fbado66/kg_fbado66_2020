@@ -22,10 +22,17 @@ let dictionary = {
 
 function convertIntegersToPhonetics(arry) {
   // Given the array with the format [3,25,209], the following var uses the spread operator to change the format into integers that are workables
-  let newArray = [...`${arry}`]
-  let array = newArray.map(i => parseInt(i))
-  
-  console.log(array)
+  let array = [...`${arry}`].map(i => parseInt(i))
+  let result = ''
+    for (let i = 0; i < array.length; i++){
+        if (array[i] in dictionary) {
+            result += dictionary[array[i]]
+        } else {
+            // any value not found in the dictionary will yields ',' as result 
+            result += ','
+        }
+    }
+    return `"${result}"` 
 }
 
 console.log(convertIntegersToPhonetics([3,25,209]))
