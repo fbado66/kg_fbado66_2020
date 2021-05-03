@@ -20,8 +20,13 @@ let dictionary = {
     9: 'Nine',
   }
 
-//   Next would be to create a function where the input can be transform into the corresponding phonetics
-//   -  such as given [3, 25, 209] the result would be “Three,TwoFive,TwoZeroNine”
-// - The idea is to grab each element on the array, and split each one, into a single integer such as given [3, 25, 209] the first number is already on its own, therefore can go into the second element 25, and here we can break it into 2 and 5, and do the same for the next elements. 
+function convertIntegersToPhonetics(arry) {
+  // Given the array with the format [3,25,209], the following var uses the spread operator to change the format into integers that are workables
+  let newArray = [...`${arry}`]
+  let array = newArray.map(i => parseInt(i))
+  
+  console.log(array)
+}
 
-// A easier and quick way to achieve this result would be to use the spread operator in the given array where everything can be parseInt, and for this specific case, there is no other characters than integers and ',' so whenever the function sees a non integer, we can use an if else statement to handle the output. 
+console.log(convertIntegersToPhonetics([3,25,209]))
+console.log(convertIntegersToPhonetics([10,300,5]))
